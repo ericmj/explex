@@ -26,8 +26,8 @@ defmodule Hex.MixProject do
     ]
   end
 
-  defp applications(:prod), do: [:ssl, :inets]
-  defp applications(_), do: [:ssl, :inets, :logger]
+  defp applications(:prod), do: [:ssl, :inets, :mix]
+  defp applications(_), do: [:ssl, :inets, :logger, :mix]
 
   # We use different versions of plug because older plug version produces
   # warnings on elixir >=1.3.0 and newer plug versions do not work on elixir <1.2.3
